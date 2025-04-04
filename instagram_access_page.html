@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protected Instagram Access</title>
+  <style>
+    body {
+      background: #f9f9f9;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .box {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    input[type="password"] {
+      padding: 10px;
+      margin-top: 10px;
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #3897f0;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Enter Password to View Instagram</h2>
+    <input type="password" id="password" placeholder="Enter password">
+    <br>
+    <button onclick="checkPassword()">Unlock</button>
+    <div id="error" class="error"></div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const correctPassword = "Monishka@123";
+      const enteredPassword = document.getElementById("password").value;
+      const errorDiv = document.getElementById("error");
+
+      if (enteredPassword === correctPassword) {
+        window.location.href = "https://instagram.com/radhepasandida";
+      } else {
+        errorDiv.textContent = "Incorrect password. Try again.";
+      }
+    }
+  </script>
+</body>
+</html>
